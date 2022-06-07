@@ -2,8 +2,8 @@
 main()
 {
     FILE *pFile = fopen("mega_todos.csv", "r");
-    int m0, m[6] = {0, 0, 0, 0, 0, 0}, i = 0, count, n0, n1, n2, n3, n4, n5, c;
-    printf("Digite seus valores, preencha espacos vazios com 0:");
+    int m0, m[6], i = 0, count, n0, n1, n2, n3, n4, n5, c;
+    printf("Digite sua jogada, preencha espacos vazios com 0:");
     scanf("%i %i %i %i %i %i", &m[0], &m[1], &m[2], &m[3], &m[4], &m[5]);
     if (pFile == '\0')
         printf(" \nErro fatal!");
