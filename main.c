@@ -6,7 +6,7 @@ main()
     printf("Digite sua modalidade |0 mega| |1 quina| |2 quadra|: ");
     scanf("%i", &mod);
     if (pFile == '\0')
-        printf(" \nErro fatal!");
+        printf(" \nErro fatal, o arquivo não pode ser aberto!");
     else
     {
         if (mod == 0)
