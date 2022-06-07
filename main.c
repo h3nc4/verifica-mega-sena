@@ -3,7 +3,7 @@ main()
 {
     FILE *pFile = fopen("mega_todos.csv", "r");
     int m[6], i = 0, n[7], c, mod;
-    printf("Digite sua modalidade |0 mega| |1 quina| |2 quadra|: ");
+    printf("\nDigite sua modalidade |0 mega| |1 quina| |2 quadra|: ");
     scanf("%i", &mod);
     if (pFile == '\0')
         printf(" \nErro fatal, o arquivo não pode ser aberto!");
