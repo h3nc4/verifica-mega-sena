@@ -3,15 +3,15 @@ main()
 {
     FILE *pFile = fopen("mega_todos.csv", "r");
     int m[6], i = 0, n[7], c, mod;
-    printf("\nDigite sua modalidade |0 mega| |1 quina| |2 quadra|: ");
+    printf("\n |mega-sena: 0| |quina: 1| |quadra: 2|\n Digite sua modalidade: ");
     scanf("%i", &mod);
     if (pFile == '\0')
-        printf(" \nErro fatal, o arquivo não pode ser aberto!");
+        printf("\n Erro fatal, o arquivo não pode ser aberto!\n");
     else
     {
         if (mod == 0)
         {
-            printf("Digite sua jogada:");
+            printf(" Digite sua jogada:");
             scanf("%i %i %i %i %i %i", &m[0], &m[1], &m[2], &m[3], &m[4], &m[5]);
             do
             {
@@ -22,11 +22,11 @@ main()
             if (i > 0)
                 printf("\n Voce ganhou a mega sena %i vezes!\n", i);
             else
-                printf("\n Voce nao ganhou nenhum jogo");
+                printf("\n Voce nao ganhou nenhum jogo\n");
         }
         else if (mod == 1)
         {
-            printf("Digite sua jogada:");
+            printf(" Digite sua jogada:");
             scanf("%i %i %i %i %i", &m[0], &m[1], &m[2], &m[3], &m[4]);
             do
             {
@@ -39,11 +39,11 @@ main()
             if (i > 0)
                 printf("\n Voce ganhou a quina %i vezes!\n", i);
             else
-                printf("\n Voce nao ganhou nenhum jogo");
+                printf("\n Voce nao ganhou nenhum jogo\n");
         }
-        else
+        else if (mod == 2)
         {
-            printf("Digite sua jogada:");
+            printf(" Digite sua jogada:");
             scanf("%i %i %i %i", &m[0], &m[1], &m[2], &m[3]);
             do
             {
@@ -58,8 +58,10 @@ main()
             if (i > 0)
                 printf("\n Voce ganhou a quadra %i vezes!\n", i);
             else
-                printf("\n Voce nao ganhou nenhum jogo");
+                printf("\n Voce nao ganhou nenhum jogo\n");
         }
+        else
+            printf(" input invalido\n");
         fclose(pFile);
     }
 }
