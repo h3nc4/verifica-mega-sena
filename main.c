@@ -2,7 +2,7 @@
 main()
 {
     FILE *pFile = fopen("mega_todos.csv", "r");
-    int m[7], i = 0, n[6], c, mod;
+    int n[6], i = 0, n[7], c, mod;
     printf("Digite sua modalidade |0 mega| |1 quina| |2 quadra|: ");
     scanf("%i", &mod);
     if (pFile == '\0')
@@ -15,7 +15,7 @@ main()
             scanf("%i %i %i %i %i %i", &m[0], &m[1], &m[2], &m[3], &m[4], &m[5]);
             do
             {
-                c = fscanf(pFile, "%i %i %i %i %i %i %i", &m[6], &n[0], &n[1], &n[2], &n[3], &n[4], &n[5]);
+                c = fscanf(pFile, "%i %i %i %i %i %i %i", &n[6], &n[0], &n[1], &n[2], &n[3], &n[4], &n[5]);
                 if (n[0] == m[0] && n[1] == m[1] && n[2] == m[2] && n[3] == m[3] && n[4] == m[4] && n[5] == m[5])
                     i++;
             } while (c != EOF);
@@ -30,7 +30,7 @@ main()
             scanf("%i %i %i %i %i", &m[0], &m[1], &m[2], &m[3], &m[4]);
             do
             {
-                c = fscanf(pFile, "%i %i %i %i %i %i %i", &m[6], &n[0], &n[1], &n[2], &n[3], &n[4], &n[5]);
+                c = fscanf(pFile, "%i %i %i %i %i %i %i", &n[6], &n[0], &n[1], &n[2], &n[3], &n[4], &n[5]);
                 if (n[0] == m[0] && n[1] == m[1] && n[2] == m[2] && n[3] == m[3] && n[4] == m[4])
                     i++;
                 else if (n[1] == m[0] && n[2] == m[1] && n[3] == m[2] && n[4] == m[3] && n[5] == m[4])
@@ -47,7 +47,7 @@ main()
             scanf("%i %i %i %i", &m[0], &m[1], &m[2], &m[3]);
             do
             {
-                c = fscanf(pFile, "%i %i %i %i %i %i %i", &m[6], &n[0], &n[1], &n[2], &n[3], &n[4], &n[5]);
+                c = fscanf(pFile, "%i %i %i %i %i %i %i", &n[6], &n[0], &n[1], &n[2], &n[3], &n[4], &n[5]);
                 if (n[0] == m[0] && n[1] == m[1] && n[2] == m[2] && n[3] == m[3])
                     i++;
                 else if (n[1] == m[0] && n[2] == m[1] && n[3] == m[2] && n[4] == m[3])
@@ -60,6 +60,6 @@ main()
             else
                 printf("\n Voce nao ganhou nenhum jogo");
         }
+        fclose(pFile);
     }
-    fclose(pFile);
 }
