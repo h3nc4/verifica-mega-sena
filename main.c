@@ -4,7 +4,7 @@ main()
     FILE *pFile = fopen("mega_todos.csv", "r");
     int m[6], i[3] = {0, 0, 0}, n[7], c, mod, k = 0;
     if (pFile == '\0')
-        printf("\n Erro fatal, o arquivo não pode ser aberto!\n");
+        printf("\n Erro fatal, o arquivo não pode ser aberto.\n");
     else
     {
         printf("\n Digite sua jogada:");
@@ -59,21 +59,21 @@ main()
             k = 0;*/
         } while (c != EOF);
         if (i[0] == 0 && i[1] == 0 && i[2] == 0)
-            printf("\n Voce nao ganhou nenhum jogo\n");
+            printf("\n Voce nao ganhou nenhum jogo.\n");
         else
         {
             if (i[0] > 0)
                 printf("\n Voce ganhou a mega sena %i vezes!\n", i[0]);
             else
-                printf("\n Voce nao ganhou a mega sena\n");
+                printf("\n Voce nao ganhou a mega sena.\n");
             if (i[1] > 0)
                 printf("\n Voce ganhou a quina %i vezes!\n", i[1]);
             else
-                printf("\n Voce nao ganhou a quina\n");
+                printf("\n Voce nao ganhou a quina.\n");
             if (i[2] > 0)
                 printf("\n Voce ganhou a quadra %i vezes!\n", i[2]);
             else
-                printf("\n Voce nao ganhou a quadra\n");
+                printf("\n Voce nao ganhou a quadra.\n");
         }
         fclose(pFile);
     }
